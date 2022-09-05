@@ -1,0 +1,16 @@
+body{
+  min-height: 100vmax;
+  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #140c03 49%, #d5701b 50%);
+  overflow: hidden;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+}
