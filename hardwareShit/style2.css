@@ -1,0 +1,53 @@
+@font-face {
+   font-family: custom;
+   src: url(font/Viga-Regular.ttf);
+}
+/*#A63635 #302C2C*/
+
+*{font-family: custom; text-decoration: none;}
+*:not(input){user-select: none;}
+body{margin:0; padding:0; background: azure; overflow-X: hidden;}
+@keyframes slickBoi {from { transform: translateY(10%); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
+#wholething{
+	display: grid; min-height: 100vh; width: 100%;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-areas: "nav" "au" "flr" "ftr" ;
+}
+
+nav{grid-area: nav;display: flex; margin: 2vw 0;}
+.bglogo{
+	background: linear-gradient(to top, #A63635 50%, #f05020 100%); display: flex; 
+	justify-content: center; height: 4.5vw; width: 10vw;
+}.logo{transform: translateX(15vw); min-height: 100%;}
+
+.navRside{display: flex; margin-left: auto;}
+nav a{margin-left: .5vw; transform: skew(-35deg); background: linear-gradient(to top, #A63635 43%, #f05020 100%); 
+	display: flex; align-items: center; justify-content: center; height: 4.5vw; width: 15vw; order: 1; transition: width ease-in-out .150s;
+}nav a:hover{background: #2e2e2e; cursor: pointer; box-shadow: 0 0 .5vw #2e2e2e;}
+.bga1:hover>p, .bga2:hover>p, .bga3:hover>p{color: gold;}
+nav p{transform: skew(35deg); margin: 0;
+	font-size: 1.5vw; color: azure; user-select: none;
+}
+.bgsimg{border: none; margin-left: -1.5vw; display: flex; align-items: center; position: relative; left: 2vw; order: 2;
+	background-color: #2e2e2e; transform: skew(-35deg); overflow: hidden; width: 10vw; height: 4.5vw; transition: width ease-in-out .150s;
+}.simg{max-height: 80%; min-height: 80%; transform: skew(35deg); margin: 0 2.5vw;} .bgsimg:hover{background: linear-gradient(to top, #A63635 43%, #f05020 100%); cursor: pointer; box-shadow: 0 0 .5vw #2e2e2e;} 
+.bgsimg:hover>.simg{transform: scale(1.2) skew(35deg); filter: brightness(1) grayscale(1) contrast(100);} .sbox{display: flex; transform: skew(35deg);}
+.bgsimg:focus-within{transform: skew(-35deg); color: #1e1e1e; background: linear-gradient(to top, #A63635 43%, #f05020 100%); box-shadow: 0 0 .5vw #2e2e2e; width: 25vw;}
+.bgsimg:focus-within ~ a{width: 10vw;}
+.sbox input[type=text]{color: gold; background: #2e2e2e; border: none; padding: 1vw .5vw; width: 12vw; outline: none; font-size: 1vw;}
+
+#au{grid-area: au; margin: 2vw 0; color: azure; animation: slickBoi .7s ease-in-out both;}.au0{display: flex;} 
+.au0 > *:nth-child(1){flex: 1 1 5%; margin-right: 2vw; background: #2e2e2e; display:flex;} 
+.text {width: 100%; margin: 4vw 0; background: linear-gradient(to left, #A63635 43%, #f05020 100%); box-shadow: 0vw 1.5vw #A63635, 0vw -1.5vw #A63635;
+	border-top: 1.5vw solid #2e2e2e; border-bottom: 1.5vw solid #2e2e2e; display: flex; justify-content: center; align-items: center;}
+.au0 h1{writing-mode: vertical-lr; text-orientation: upright; font-size: 2.3vw; margin: 0; letter-spacing: -.5vw;}
+.au0 > *:nth-child(2){flex: 1 1 90%; background: linear-gradient(to right, #A63635 33%, #f05020 80%);} .au0 img{width: auto; height: 25vw;} .aumain p{margin: 3vw; text-align: justify; font-size: 1.5vw; align-self: center;}
+.aumain{display: flex; margin: 4vw 0;  background: #2e2e2e; box-shadow: 0vw 1.5vw #2e2e2e, 0vw -1.5vw #2e2e2e; border-top: 1.5vw solid #A63635; border-bottom: 1.5vw solid #A63635;} 
+.au1{display: flex; margin: 2vw 0;} .au1 > *:nth-child(1){flex: 1 1 50%; margin-right: 1vw; background: linear-gradient(to left, #A63635 43%, #f05020 100%);} .au1 > *:nth-child(2){flex: 1 1 50%; margin-left: 1vw; background: linear-gradient(to right, #A63635 43%, #f05020 100%);} 
+.au1 p{text-align: center; margin: 2vw 3vw;} .au1 h1{font-size: 2vw;} .au1 .aumain{display: block; height: 13vw;}
+
+.flr{grid-area: flr; background: #2e2e2e; height: auto;}
+
+footer{grid-area: ftr; background: #2e2e2e; align-self: flex-end;} footer div{display:inline-flex;} footer div div{justify-content: center; flex-direction: column; align-items: flex-end; transform: translateX(28vw);}
+footer img{width: 10vw; margin: 1vw; transform: translateX(-30vw);} footer a{color: azure; text-decoration: none; font-size: 1.5vw; margin:2vw; padding: 0 1vw; border-right:.3vw solid azure; border-left:.3vw solid azure;}
+footer a:hover{color: gold; border-color: gold;} footer hr{margin: 0 5vw; background-color: azure; border: .15vw solid azure;} footer p{font-size: 1.5vw; margin:.8vw; color: azure;}

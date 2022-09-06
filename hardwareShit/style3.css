@@ -1,0 +1,66 @@
+@font-face {
+   font-family: custom;
+   src: url(font/Viga-Regular.ttf);
+}
+/*#A63635 #302C2C*/
+
+*{font-family: custom; text-decoration: none;}
+*:not(input){user-select: none;}
+body{margin:0; padding:0; background: azure; overflow-X: hidden;}
+@keyframes slickBoi {from { transform: translateY(10%); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
+#wholething{
+	display: grid; min-height: 100vh; width: 100%;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-areas: "nav" "lvmsg" "flr" "ftr" ;
+}
+
+nav{grid-area: nav;display: flex; margin: 2vw 0;}
+.bglogo{
+	background: linear-gradient(to top, #A63635 50%, #f05020 100%); display: flex; 
+	justify-content: center; height: 4.5vw; width: 10vw;
+}.logo{transform: translateX(15vw); min-height: 100%;}
+
+.navRside{display: flex; margin-left: auto;}
+nav a{margin-left: .5vw; transform: skew(-35deg); background: linear-gradient(to top, #A63635 43%, #f05020 100%); 
+	display: flex; align-items: center; justify-content: center; height: 4.5vw; width: 15vw; order: 1; transition: width ease-in-out .150s;
+}nav a:hover{background: #2e2e2e; cursor: pointer; box-shadow: 0 0 .5vw #2e2e2e;}
+.bga1:hover>p, .bga2:hover>p, .bga3:hover>p{color: gold;}
+nav p{transform: skew(35deg); margin: 0;
+	font-size: 1.5vw; color: azure; user-select: none;
+}
+.bgsimg{border: none; margin-left: -1.5vw; display: flex; align-items: center; position: relative; left: 2vw; order: 2;
+	background-color: #2e2e2e; transform: skew(-35deg); overflow: hidden; width: 10vw; height: 4.5vw; transition: width ease-in-out .150s;
+}.simg{max-height: 80%; min-height: 80%; transform: skew(35deg); margin: 0 2.5vw;} .bgsimg:hover{background: linear-gradient(to top, #A63635 43%, #f05020 100%); cursor: pointer; box-shadow: 0 0 .5vw #2e2e2e;} 
+.bgsimg:hover>.simg{transform: scale(1.2) skew(35deg); filter: brightness(1) grayscale(1) contrast(100);} .sbox{display: flex; transform: skew(35deg);}
+.bgsimg:focus-within{transform: skew(-35deg); color: #1e1e1e; background: linear-gradient(to top, #A63635 43%, #f05020 100%); box-shadow: 0 0 .5vw #2e2e2e; width: 25vw;}
+.bgsimg:focus-within ~ a{width: 10vw;}
+.sbox input[type=text]{color: gold; background: #2e2e2e; border: none; padding: 1vw .5vw; width: 12vw; outline: none; font-size: 1vw;}
+
+#lm{grid-area: lvmsg; display: grid; background: linear-gradient(to bottom, #A63635 32%, #f05020 74%, #ffb112 100%); padding-bottom: 2.5vw; animation: slickBoi .7s ease-in-out both;
+	grid-template-columns: 1fr auto auto 1fr; align-self: flex-end; grid-template-rows: 8.9vw auto auto; 
+	grid-template-areas: "lmh lmh lmh lmh" ". lmform lmform ." ". lmform lmform submit";}
+.lmheader{grid-area: lmh; background: #2e2e2e; margin: 2vw 0; min-height: 1vw;}
+.lmheader div{
+	background: #2e2e2e; width: 40vw; padding: .1vw; transform: skew(-35deg); border-left: 2vw solid #2e2e2e; border-right: 2vw solid #2e2e2e;
+	box-shadow: 2vw 0vw #A63635 inset, -2vw 0vw #A63635 inset, 2vw 0vw #A63635, -2vw 0vw #A63635;}
+.lmheader p{color: gold; transform: skew(35deg); font-size: 2vw; margin: 0; padding: 1vw 0; user-select: none;}
+.formcontainer{grid-area: lmform;} 
+
+.formform{display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto auto; 
+grid-template-areas: "inpttxt ." "inptemail inptnum" "txtarea txtarea"; width: 60vw; grid-gap: 1.5vw;}
+.formform input[type=text],.formform input[type=email],.formform input[type=number],.formform textarea{
+	background: #2e2e2e; box-shadow: 0 0 .8vw #141414 inset; color: gold; padding: 1vw; border: none; font-size: 1vw;}::placeholder{opacity: 1; color: goldenrod;}
+.formform input[type=text]{grid-area: inpttxt;}.formform input[type=email]{grid-area: inptemail;}
+.formform input[type=number]{grid-area: inptnum; appearance: textfield;}
+.formform textarea{grid-area: txtarea; min-height: 20vw; resize: none;}
+.bgmimg{
+	grid-area: submit; border: none; margin-left: 1.5vw;
+	background: #2e2e2e; justify-content: center;
+}.mimg{width: 5vw;} .bgmimg:hover{box-shadow: 0 0 .8vw #2e2e2e; cursor: pointer;} 
+.bgmimg:hover>.mimg{transition-duration: 1s; transform: scale(1.2) rotate(-360deg); filter: brightness(1) grayscale(1) contrast(100);}
+
+.flr{grid-area: flr; background: #2e2e2e; height: auto;}
+
+footer{grid-area: ftr; background: #2e2e2e; align-self: flex-end;} footer div{display:inline-flex;} footer div div{justify-content: center; flex-direction: column; align-items: flex-end; transform: translateX(28vw);}
+footer img{width: 10vw; margin: 1vw; transform: translateX(-30vw);} footer a{color: azure; text-decoration: none; font-size: 1.5vw; margin:2vw; padding: 0 1vw; border-right:.3vw solid azure; border-left:.3vw solid azure;}
+footer a:hover{color: gold; border-color: gold;} footer hr{margin: 0 5vw; background-color: azure; border: .15vw solid azure;} footer p{font-size: 1.5vw; margin: .8vw; color: azure;}
