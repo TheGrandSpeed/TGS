@@ -1,0 +1,26 @@
+@font-face {
+   font-family: custom;
+   src: url(font/Poppins-Light.ttf);
+   font-weight: lighter;
+}@font-face {
+   font-family: custom;
+   src: url(font/Poppins-Regular.ttf);
+   font-weight: normal;
+}@font-face {
+   font-family: custom;
+   src: url(font/Poppins-Bold.ttf);
+   font-weight: bold;
+}
+
+*{color: #2a2a2a; font-family: custom; font-size: 1vw;}
+body{background-color: #E6F8B2; margin:0;}
+
+.navBar{display: grid; grid-template-columns: repeat(4, 1fr); position: sticky; grid-gap: 2vw; margin: 2vw 20%}
+.navBar a{padding: 1vw 0; background-color: #D38C36; color: #2a2a2a; font-size: 1.5vw; text-decoration: none; font-weight: bold; user-select: none;}
+.navBar a:hover{background-color: #EBCC5C; text-decoration: underline; text-decoration-thickness: .2vw;}
+
+.daContext{margin: 2vw 20%;}
+h1{font-size: 3vw; margin: 5vw 5vw 1vw 5vw; user-select: none;}
+p{text-align: left; font-size: 1.2vw; margin: 1vw 5vw; user-select: none;}
+
+.just_a_line{background-color: #2a2a2a; height: .25vw;}
